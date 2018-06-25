@@ -56,6 +56,8 @@ class TraderTile(MapTile):
 					choice = int(user_input)
 					to_swap = seller.inventory[choice - 1]
 					self.swap(seller, buyer, to_swap)
+				except IndexError:
+					print("Item doesn't exist.")
 				except ValueError:
 					print("Wrong choice lah.")
 
@@ -114,6 +116,8 @@ class PedasTile(MapTile):
 					choice = int(user_input)
 					to_swap = seller.inventory[choice - 1]
 					self.swap(seller, buyer, to_swap)
+				except IndexError:
+					print("Item doesn't exist.")
 				except ValueError:
 					print("Wrong choice lah.")
 
